@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Initial/Initial.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
   - enabled: 1
+    path: Assets/Scenes/Game Screensaver/GameScreensaver.unity
+    guid: d93eb87ee51878f43aebc6463568a2c3
+  - enabled: 1
     path: Assets/Scenes/Game/Game.unity
     guid: 6b038928096f11d4bb1e80bd136c73c1
   m_configObjects:
