@@ -13,11 +13,14 @@ namespace Assets.Scripts.Infrastructure
         [SerializeField]
         private GameStaticData _gameStaticData;
 
+        [SerializeField]
+        private BankStaticData _bankStaticData;
+
         private Game _game;
 
         private void Awake()
         {
-            _game = new Game(this, _hud, _gameStaticData);
+            _game = new Game(this, _hud, _gameStaticData, _bankStaticData);
 
             DontDestroyOnLoad(gameObject);
 

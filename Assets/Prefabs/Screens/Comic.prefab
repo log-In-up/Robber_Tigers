@@ -499,6 +499,7 @@ MonoBehaviour:
   - {fileID: 6994854969650468192}
   - {fileID: 8769696343335215922}
   - {fileID: 8834388539186973081}
+  _gameStaticData: {fileID: 11400000, guid: cec65871780b2a54da0c2f30853ddece, type: 2}
 --- !u!1 &4440546258435257065
 GameObject:
   m_ObjectHideFlags: 0

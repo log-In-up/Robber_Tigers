@@ -22,18 +22,23 @@ namespace Assets.Scripts.Infrastructure
             _coroutineRunner.StartCoroutine(LoadScene(sceneName, 0, onLoaded));
         }
 
-        public AsyncOperation LoadGameLevel(string sceneName, Action onLoaded = null)
+        public void LoadGameLevel(string sceneName, Action onLoaded = null)
         {
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
             _coroutineRunner.StartCoroutine(LoadScene(asyncOperation, onLoaded));
-
-            return asyncOperation;
         }
 
-        public void LoadScreensaverScene(float delay = 0, Action onLoaded = null)
+        public void LoadScreensaverScene(float delay, Action onLoaded = null)
         {
             _coroutineRunner.StartCoroutine(LoadScene(_gameStaticData.GameScreensaver, delay, onLoaded));
+        }
+
+        public void LoadScreensaverScene(Action onLoaded = null)
+        {
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(_gameStaticData.GameScreensaver, LoadSceneMode.Single);
+
+            _coroutineRunner.StartCoroutine(LoadScene(asyncOperation, onLoaded));
         }
 
         private IEnumerator LoadScene(string sceneName, float delay, Action onLoaded = null)
@@ -44,7 +49,7 @@ namespace Assets.Scripts.Infrastructure
                 yield break;
             }
 
-            AsyncOperation waitNextScene = SceneManager.LoadSceneAsync(sceneName);
+            AsyncOperation waitNextScene = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
             waitNextScene.allowSceneActivation = false;
 
             while (!waitNextScene.isDone)

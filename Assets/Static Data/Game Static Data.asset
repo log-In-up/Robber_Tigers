@@ -12,5 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e728dd1aa4926d548a2e9bb45c72ae98, type: 3}
   m_Name: Game Static Data
   m_EditorClassIdentifier: 
-  _gameScreensaver: {fileID: 102900000, guid: d93eb87ee51878f43aebc6463568a2c3, type: 3}
-  _initialScene: {fileID: 102900000, guid: c850ee8c3b14cc8459e7e186857cf567, type: 3}
+  _delayBeforeScreensaver: 2.5
+  _gameScene: Game
+  _gameScreensaver: GameScreensaver
+  _increasedTigerSpeed: 2
+  _initialScene: Initial
+  _normalTigerSpeed: 1
+  _speedUpTime: 0.5

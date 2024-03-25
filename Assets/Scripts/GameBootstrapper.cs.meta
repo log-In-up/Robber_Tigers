@@ -6,7 +6,8 @@ MonoImporter:
   defaultReferences:
   - _hud: {fileID: 8177224457038932005, guid: 82331a5102c3e3c43bfb5231d0625fb9, type: 3}
   - _gameStaticData: {fileID: 11400000, guid: cec65871780b2a54da0c2f30853ddece, type: 2}
-  executionOrder: 0
+  - _bankStaticData: {fileID: 11400000, guid: 805608b7ed763264a96c64e57f6e2b15, type: 2}
+  executionOrder: -799
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

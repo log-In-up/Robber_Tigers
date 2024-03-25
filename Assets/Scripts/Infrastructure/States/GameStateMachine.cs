@@ -1,4 +1,7 @@
 ﻿using Assets.Scripts.Infrastructure.Services;
+using Assets.Scripts.Infrastructure.Services.Buildings;
+using Assets.Scripts.Infrastructure.Services.Factory;
+using Assets.Scripts.Infrastructure.Services.PlayerBank;
 using Assets.Scripts.Infrastructure.Services.UserInterface;
 using Assets.Scripts.StaticData;
 using System;
@@ -11,16 +14,19 @@ namespace Assets.Scripts.Infrastructure.States
         private readonly SceneLoader _sceneLoader;
         private readonly ServiceLocator _serviceLocator;
         private readonly GameStaticData _gameStaticData;
+        private readonly ICoroutineRunner _coroutineRunner;
         private IExitableState _activeState;
         private Dictionary<Type, IExitableState> _states;
 
         public GameStateMachine(SceneLoader sceneLoader,
             ServiceLocator serviceLocator,
-            GameStaticData gameStaticData)
+            GameStaticData gameStaticData,
+            ICoroutineRunner coroutineRunner)
         {
             _sceneLoader = sceneLoader;
             _serviceLocator = serviceLocator;
             _gameStaticData = gameStaticData;
+            _coroutineRunner = coroutineRunner;
         }
 
         ~GameStateMachine()
@@ -50,9 +56,14 @@ namespace Assets.Scripts.Infrastructure.States
             _states = new Dictionary<Type, IExitableState>()
             {
                 [typeof(GameLoopState)] = new GameLoopState(this,
+                    _gameStaticData,
+                    _coroutineRunner,
+                    _serviceLocator.GetService<IBuildingsService>(),
+                    _serviceLocator.GetService<IGameFactory>(),
                     _serviceLocator.GetService<IGameUI>()),
                 [typeof(LoadLevelState)] = new LoadLevelState(this,
                     _sceneLoader,
+                    _serviceLocator.GetService<IPlayerBank>(),
                     _serviceLocator.GetService<IGameUI>()),
                 [typeof(LoadGameState)] = new LoadGameState(this,
                     _sceneLoader,

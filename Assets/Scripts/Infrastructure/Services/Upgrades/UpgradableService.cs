@@ -1,0 +1,13 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Assets.Scripts.Infrastructure.Services.Upgrades
+{
+    public class UpgradableService : IUpgradableService
+    {
+        public UpgradableService()
+        {
+        }
+    }
+}

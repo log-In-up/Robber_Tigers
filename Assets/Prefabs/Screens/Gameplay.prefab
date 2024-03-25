@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1990957899889059862}
   - component: {fileID: 5428933744019814867}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Add Bank Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -414,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7158766844140375734}
   - component: {fileID: 1315427996259039886}
+  - component: {fileID: 3069605096737965148}
   m_Layer: 0
   m_Name: Add Menu
   m_TagString: Untagged
@@ -470,6 +471,25 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3069605096737965148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3020622088923622676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a596c768b99257944991e89341f953d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _addBank: {fileID: 1746819871118295333}
+  _addBankText: {fileID: 5428933744019814867}
+  _addButchery: {fileID: 58549120788118476}
+  _addButcheryText: {fileID: 3628981745018950984}
+  _addTiger: {fileID: 2677836588877369846}
+  _addTigerText: {fileID: 8805134896773915326}
+  _staticData: {fileID: 11400000, guid: c7bc99cb1f58b4c48bc283a5ae0a889c, type: 2}
 --- !u!1 &3169314245018221245
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,6 +679,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a41dd40265baf45af439daf802eb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _addMenu: {fileID: 3069605096737965148}
+  _exit: {fileID: 5248604574251350332}
+  _hint: {fileID: 2237453267633399769}
+  _totalCoins: {fileID: 4809792011466632652}
+  _totalMeat: {fileID: 201882081377176196}
 --- !u!1 &3622126848320266001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1234,7 @@ GameObject:
   - component: {fileID: 1812076875088401132}
   - component: {fileID: 201882081377176196}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Total Meat Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,7 +1446,7 @@ GameObject:
   - component: {fileID: 6749572980768277143}
   - component: {fileID: 8805134896773915326}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Add Tiger Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1773,7 +1798,7 @@ GameObject:
   - component: {fileID: 897746111603695651}
   - component: {fileID: 4809792011466632652}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Total Coins Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1909,7 +1934,7 @@ GameObject:
   - component: {fileID: 3903277189001410066}
   - component: {fileID: 3628981745018950984}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Add Butchery Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

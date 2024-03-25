@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 60cb63901c653c64fb23eeb7aa11c09d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _splineComputer: {instanceID: 0}
+  - _transformParent: {instanceID: 0}
+  - _tiger: {fileID: 5904581397146135927, guid: 07946cfe1c36b0c43a6f405b321c09d2,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

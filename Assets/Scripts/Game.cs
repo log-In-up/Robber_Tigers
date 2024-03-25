@@ -16,15 +16,15 @@ namespace Assets.Scripts.Infrastructure
         private ServiceLocator _serviceLocator;
         private GameStateMachine _stateMachine;
 
-        public Game(ICoroutineRunner coroutineRunner, GameUI hud, GameStaticData gameStaticData)
+        public Game(ICoroutineRunner coroutineRunner, GameUI hud, GameStaticData gameStaticData, BankStaticData bankStaticData)
         {
             _gameStaticData = gameStaticData;
             _hud = hud;
 
             _sceneLoader = new SceneLoader(coroutineRunner, gameStaticData);
             _serviceLocator = new ServiceLocator();
-            _stateMachine = new GameStateMachine(_sceneLoader, _serviceLocator, gameStaticData);
-            _serviceInitializer = new ServiceInitializer(_stateMachine, _serviceLocator, gameStaticData, _sceneLoader);
+            _stateMachine = new GameStateMachine(_sceneLoader, _serviceLocator, gameStaticData, coroutineRunner);
+            _serviceInitializer = new ServiceInitializer(_stateMachine, _serviceLocator, gameStaticData, bankStaticData, _sceneLoader);
         }
 
         ~Game()

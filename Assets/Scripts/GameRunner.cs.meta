@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - _gameBootstrapper: {fileID: 1710089248313633765, guid: 734729dd020de9048a5f255b28403616,
       type: 3}
-  executionOrder: 0
+  executionOrder: -800
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

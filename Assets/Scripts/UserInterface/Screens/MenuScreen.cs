@@ -26,8 +26,6 @@ namespace Assets.Scripts.UserInterface.Screens
             _play.onClick.AddListener(OnClickPlay);
             _settings.onClick.AddListener(OnClickSettings);
 
-            _play.interactable = true;
-
             base.Activate();
         }
 
@@ -39,8 +37,6 @@ namespace Assets.Scripts.UserInterface.Screens
             _settings.onClick.RemoveListener(OnClickSettings);
 
             base.Deactivate();
-
-            _play.interactable = true;
         }
 
         private void OnClickLeaderboard()
@@ -53,8 +49,6 @@ namespace Assets.Scripts.UserInterface.Screens
 
         private void OnClickPlay()
         {
-            _play.interactable = false;
-
             GameUI.OpenScreen(ScreenID.Comic);
         }
 
